@@ -1,0 +1,82 @@
+{
+  "app": "argos-xdrop-modal-smoke",
+  "checked_at_utc": "2026-05-23T13:34:44.471463+00:00",
+  "commit": "52cd757324ea9828fac9c66994a7260d11e0743c",
+  "fork_url": "https://github.com/TheMindExpansionNetwork/argos.git",
+  "modal_lane": "CPU headless mock robotics swarm smoke",
+  "ok": true,
+  "smoke": {
+    "assigned_task_count": 2,
+    "assignment_robot_count": 2,
+    "robots": [
+      "mock-Modal-G1-A@10.10.0.1",
+      "mock-Modal-G1-B@10.10.0.2"
+    ],
+    "task_duration_seconds": 13.234085198999999,
+    "task_success": true,
+    "waypoint_counts": [
+      20,
+      20
+    ],
+    "zone_count": 2
+  },
+  "steps": [
+    {
+      "cmd": "git clone --depth 1 https://github.com/TheMindExpansionNetwork/argos.git /tmp/argos",
+      "cwd": null,
+      "returncode": 0,
+      "seconds": 0.787,
+      "stderr_tail": "Cloning into '/tmp/argos'...\n",
+      "stdout_tail": ""
+    },
+    {
+      "cmd": "git fetch --depth 1 origin 52cd757324ea9828fac9c66994a7260d11e0743c",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 0.513,
+      "stderr_tail": "From https://github.com/TheMindExpansionNetwork/argos\n * branch            52cd757324ea9828fac9c66994a7260d11e0743c -> FETCH_HEAD\n",
+      "stdout_tail": ""
+    },
+    {
+      "cmd": "git checkout 52cd757324ea9828fac9c66994a7260d11e0743c",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 0.026,
+      "stderr_tail": "Note: switching to '52cd757324ea9828fac9c66994a7260d11e0743c'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\nHEAD is now at 52cd757 feat(cli): interactive task wizard as standalone argos task build command\n",
+      "stdout_tail": ""
+    },
+    {
+      "cmd": "python -m pip install -e .",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 14.414,
+      "stderr_tail": "\n[notice] A new release of pip is available: 25.2 -> 26.1.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout_tail": "c_micro_py-2.0.0-py3-none-any.whl.metadata (2.2 kB)\nCollecting click>=8.2.1 (from typer>=0.12->argos==0.1.0)\n  Downloading click-8.4.1-py3-none-any.whl.metadata (2.6 kB)\nCollecting shellingham>=1.3.0 (from typer>=0.12->argos==0.1.0)\n  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)\nCollecting annotated-doc>=0.0.2 (from typer>=0.12->argos==0.1.0)\n  Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)\nDownloading aiofiles-25.1.0-py3-none-any.whl (14 kB)\nDownloading anthropic-0.104.1-py3-none-any.whl (832 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 833.0/833.0 kB 59.0 MB/s  0:00:00\nDownloading anyio-4.13.0-py3-none-any.whl (114 kB)\nDownloading distro-1.9.0-py3-none-any.whl (20 kB)\nDownloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)\nDownloading httpx-0.28.1-py3-none-any.whl (73 kB)\nDownloading httpcore-1.0.9-py3-none-any.whl (78 kB)\nDownloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (349 kB)\nDownloading pydantic-2.13.4-py3-none-any.whl (472 kB)\nDownloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2.1/2.1 MB 141.1 MB/s  0:00:00\nDownloading annotated_types-0.7.0-py3-none-any.whl (13 kB)\nDownloading h11-0.16.0-py3-none-any.whl (37 kB)\nDownloading networkx-3.6.1-py3-none-any.whl (2.1 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2.1/2.1 MB 273.0 MB/s  0:00:00\nDownloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 16.9/16.9 MB 160.4 MB/s  0:00:00\nDownloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 806.6/806.6 kB 113.5 MB/s  0:00:00\nDownloading rich-15.0.0-py3-none-any.whl (310 kB)\nDownloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)\nDownloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)\nDownloading textual-8.2.7-py3-none-any.whl (731 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 731.1/731.1 kB 255.4 MB/s  0:00:00\nDownloading platformdirs-4.9.6-py3-none-any.whl (21 kB)\nDownloading linkify_it_py-2.1.0-py3-none-any.whl (19 kB)\nDownloading typer-0.25.1-py3-none-any.whl (58 kB)\nDownloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)\nDownloading click-8.4.1-py3-none-any.whl (116 kB)\nDownloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)\nDownloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)\nDownloading mdit_py_plugins-0.6.1-py3-none-any.whl (66 kB)\nDownloading sniffio-1.3.1-py3-none-any.whl (10 kB)\nDownloading uc_micro_py-2.0.0-py3-none-any.whl (6.4 kB)\nBuilding wheels for collected packages: argos\n  Building editable for argos (pyproject.toml): started\n  Building editable for argos (pyproject.toml): finished with status 'done'\n  Created wheel for argos: filename=argos-0.1.0-py3-none-any.whl size=6950 sha256=0fd61b7252df39bf142391a6dc2b245668a40653f3e9b71039794c3087e51c9f\n  Stored in directory: /tmp/pip-ephem-wheel-cache-2kcwozcd/wheels/62/ad/a5/b8d40295e601a67dc78b35aef7c46630f7b401e6fa312ace71\nSuccessfully built argos\nInstalling collected packages: uc-micro-py, typing-inspection, sniffio, shellingham, pyyaml, pydantic-core, platformdirs, numpy, networkx, mdurl, jiter, h11, docstring-parser, distro, click, anyio, annotated-types, annotated-doc, aiofiles, pydantic, markdown-it-py, linkify-it-py, httpcore, rich, mdit-py-plugins, httpx, typer, textual, anthropic, argos\n\nSuccessfully installed aiofiles-25.1.0 annotated-doc-0.0.4 annotated-types-0.7.0 anthropic-0.104.1 anyio-4.13.0 argos-0.1.0 click-8.4.1 distro-1.9.0 docstring-parser-0.18.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 jiter-0.15.0 linkify-it-py-2.1.0 markdown-it-py-4.2.0 mdit-py-plugins-0.6.1 mdurl-0.1.2 networkx-3.6.1 numpy-2.4.6 platformdirs-4.9.6 pydantic-2.13.4 pydantic-core-2.46.4 pyyaml-6.0.3 rich-15.0.0 shellingham-1.5.4 sniffio-1.3.1 textual-8.2.7 typer-0.25.1 typing-inspection-0.4.2 uc-micro-py-2.0.0\n"
+    },
+    {
+      "cmd": "python -m compileall -q argos tests",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 0.239,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "cmd": "python -m pytest -q tests/test_navigation.py tests/test_tasks.py tests/test_swarm.py",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 8.502,
+      "stderr_tail": "",
+      "stdout_tail": ".............................                                            [100%]\n29 passed in 7.59s\n"
+    },
+    {
+      "cmd": "python modal_headless_smoke.py",
+      "cwd": "/tmp/argos",
+      "returncode": 0,
+      "seconds": 15.005,
+      "stderr_tail": "unitree_sdk2_python not installed. Running in mock/simulation mode.\n",
+      "stdout_tail": "{\"assigned_task_count\": 2, \"assignment_robot_count\": 2, \"robots\": [\"mock-Modal-G1-A@10.10.0.1\", \"mock-Modal-G1-B@10.10.0.2\"], \"task_duration_seconds\": 13.234085198999999, \"task_success\": true, \"waypoint_counts\": [20, 20], \"zone_count\": 2}\n"
+    }
+  ],
+  "upstream_url": "https://github.com/knoxsbyte/argos.git"
+}
